@@ -31,7 +31,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import batmanImg from '@/assets/images/batman.jpg';
+import batmanImg from '@/assets/images/Batman.jpg';
 import spidermanImg from '@/assets/images/spiderman.jpg';
 import wildwestImg from '@/assets/images/Wild West.jpg';
 
