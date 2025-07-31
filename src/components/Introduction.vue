@@ -27,22 +27,8 @@
         </div>
         <div class="card-info">
           <h3>{{ movie.title }}</h3>
-  <p>
-    <span v-if="expandedCards[movie.id || movie.title]">
-      {{ getDescription(movie) }}
-    </span>
-    <span v-else>
-      {{ getShortDescription(movie) }}
-    </span>
-    <button
-      v-if="isLongDescription(movie)"
-      class="read-more-btn"
-      @click="toggleReadMore(movie)"
-    >
-      {{ expandedCards[movie.id || movie.title] ? 'Read Less' : 'Read More' }}
-    </button>
-  </p>
-  <button class="watch-btn">Watch</button>
+          <p>{{ movie.overview || movie.desc }}</p>
+          <button class="watch-btn">Watch</button>
         </div>
       </div>
     </div>
@@ -51,12 +37,12 @@
 
 <script setup>
 import { ref, onMounted, reactive } from 'vue';
-import batmanImg from '@/assets/images/Batman.jpg';
-import spidermanImg from '@/assets/images/spiderman.jpg';
-import wildwestImg from '@/assets/images/Wild West.jpg';
+// import batmanImg from '@/assets/images/Batman.jpg';
+// import spidermanImg from '@/assets/images/spiderman.jpg';
+// import wildwestImg from '@/assets/images/Wild West.jpg';
 
 // Read from .env (Vite exposes variables as VITE_*)
-const API_KEY = '73df24bf058b017a74e43bf4ae82e1a5'; // Use your API key directly
+const API_KEY = '73df24bf058b017a74e43bf4ae82e1a5';
 const API_URL = import.meta.env.VITE_API_URL || 'https://api.themoviedb.org/3/search/movie';
 const POPULAR_URL = import.meta.env.VITE_POPULAR_URL || 'https://api.themoviedb.org/3/movie/popular';
 const IMAGE_BASE = import.meta.env.VITE_IMAGE_BASE || 'https://image.tmdb.org/t/p/w500';
@@ -82,23 +68,23 @@ function isLongDescription(movie) {
 }
 
 // Fallback movies
-const fallbackMovies = [
-  {
-    title: 'Batman Returns',
-    img: batmanImg,
-    desc: 'A dark knight must protect Gotham from the Penguin and Catwoman.'
-  },
-  {
-    title: 'Wild Wild West',
-    img: wildwestImg,
-    desc: 'Two agents team up to stop a diabolical inventor in the Old West.'
-  },
-  {
-    title: 'The Amazing Spiderman',
-    img: spidermanImg,
-    desc: 'Peter Parker faces new challenges as the web-slinging superhero.'
-  }
-];
+// const fallbackMovies = [
+//   {
+//     title: 'Batman Returns',
+//     img: batmanImg,
+//     desc: 'A dark knight must protect Gotham from the Penguin and Catwoman.'
+//   },
+//   {
+//     title: 'Wild Wild West',
+//     img: wildwestImg,
+//     desc: 'Two agents team up to stop a diabolical inventor in the Old West.'
+//   },
+//   {
+//     title: 'The Amazing Spiderman',
+//     img: spidermanImg,
+//     desc: 'Peter Parker faces new challenges as the web-slinging superhero.'
+//   }
+// ];
 
 // Get full image URL or fallback to local images for fallback movies
 function getImageUrl(movie) {
