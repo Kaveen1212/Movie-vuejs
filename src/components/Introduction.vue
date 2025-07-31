@@ -28,8 +28,8 @@
     </div>
   </section>
 </template>
-
 <script setup>
+
 import { ref } from 'vue';
 import batmanImg from '@/assets/images/Batman.jpg';
 import spidermanImg from '@/assets/images/spiderman.jpg';
