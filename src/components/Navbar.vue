@@ -62,10 +62,10 @@ onUnmounted(() => {
       <span class="navbar__brand">Logoipsum</span>
     </div>
     <ul class="navbar__links">
-      <li><a href="#">HOME</a></li>
+      <li><a href="#" class="active">HOME</a></li>
       <li><a href="#">OUR SCREENS</a></li>
       <li><a href="#">SCHEDULE</a></li>
-      <li><a href="#" class="active">MOVIE LIBRARY</a></li>
+      <li><a href="#" >MOVIE LIBRARY</a></li>
       <li><a href="#">LOCATION & CONTACT</a></li>
     </ul>
     <div class="navbar__menu" @click.stop="toggleMenu">
@@ -118,7 +118,7 @@ onUnmounted(() => {
 .navbar__brand {
   color: #fff;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: 'Montserrat', Arial, sans-serif;
 }
 

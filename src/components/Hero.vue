@@ -46,7 +46,7 @@ export default {
   width: 100vw;
   color: #fff;
   border-top: 1px solid #444;
-  padding: 60px 0 60px 0;
+  padding: 0px 0 60px 0;
   box-sizing: border-box;
 }
 
