@@ -271,6 +271,9 @@ onMounted(fetchInitialMovies);
 
 .card-info {
   padding: 20px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card-info h3 {
@@ -284,6 +287,7 @@ onMounted(fetchInitialMovies);
   font-size: 1rem;
   color: #ccc;
   margin: 0;
+  flex: 1;
 }
 
 .watch-btn {
@@ -297,6 +301,7 @@ onMounted(fetchInitialMovies);
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
+  align-self: flex-start;
 }
 .watch-btn:hover {
   background: #ffd54f;
